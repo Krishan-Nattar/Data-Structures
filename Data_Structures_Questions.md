@@ -64,3 +64,5 @@ O(1)
 O(1)
 
     a. Compare the runtime of the doubly linked list's `delete` method with the worst-case runtime of the JS `Array.splice` method. Which method generally performs better?
+
+    The doubly linked list, because .splice would worst case be O(n)
