@@ -39,7 +39,6 @@ class BinarySearchTree:
                     current = current.left
                 else:
                     return False  
-
             else:
                 if current.right:
                     current = current.right
@@ -72,32 +71,15 @@ class BinarySearchTree:
     # Hint:  Use a recursive, depth first traversal
     def in_order_print(self, node):
         current = node
-        # print(current.value)
-        # while current.left:
-        #     current = current.left
-        #     if current.left:
-        #         previous = current
-        # print(current.value)
-        # O(n)
         if current.left:
             self.in_order_print(current.left)
         print(current.value)
         if current.right:
             self.in_order_print(current.right)
 
-
     # Print the value of every node, starting with the given node,
     # in an iterative breadth first traversal
     def bft_print(self, node):
-        # current = node
-        # print(current.value)
-
-        # if current.left:
-        #     left = current.left
-        #     print(current.left.value)
-        # if current.right:
-        #     right = current.right
-        #     print(current.right.value)
         queue = Queue()
         queue.enqueue(node)
         while queue.len() > 0:
@@ -108,9 +90,6 @@ class BinarySearchTree:
             if popped.right:
                 queue.enqueue(popped.right)
 
-
-        # pass
-
     # Print the value of every node, starting with the given node,
     # in an iterative depth first traversal
     def dft_print(self, node):
@@ -118,18 +97,12 @@ class BinarySearchTree:
         stack = Stack()
         stack.push(current)
         while stack.len() > 0:
-            # if current.left:
-            # self.in_order_print(current.left)
             popped = stack.pop()
             print(popped.value)
-            # stack.push(current.left)
-            # current = current.left
             if popped.right:
                 stack.push(popped.right)
             if popped.left:
                 stack.push(popped.left)
-            #     self.in_order_print(current.right)
-        pass
 
     # STRETCH Goals -------------------------
     # Note: Research may be required
