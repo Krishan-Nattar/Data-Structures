@@ -145,11 +145,6 @@ class DoublyLinkedList:
                 self.tail = node
                 current_tail.next = self.tail
                 self.tail.prev = current_tail
-        # if node == self.tail:
-        #     return
-        # value = node.value
-        # self.delete(node)
-        # self.add_to_tail(value)
 
     """Removes a node from the list and handles cases where
     the node was the head or the tail"""
